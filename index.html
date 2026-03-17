@@ -5,313 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Human-AI Co-Creation in Generative Art | SIGGRAPH 2026 Workshop</title>
     <meta name="description" content="SIGGRAPH 2026 Workshop on Human-AI Co-Creation in Generative Art: Graphics Methods, Systems, and Applications">
-    <style>
-        :root {
-            --primary: #1a1a2e;
-            --secondary: #16213e;
-            --accent: #e94560;
-            --text: #eaeaea;
-            --text-muted: #a0a0a0;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: var(--primary);
-            color: var(--text);
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        header {
-            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
-            padding: 80px 0 60px;
-            text-align: center;
-            border-bottom: 3px solid var(--accent);
-        }
-
-        .workshop-badge {
-            display: inline-block;
-            background: var(--accent);
-            color: white;
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .subtitle {
-            font-size: 1.3rem;
-            color: var(--text-muted);
-            margin-bottom: 25px;
-        }
-
-        .event-info {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            font-size: 1rem;
-            color: var(--text-muted);
-        }
-
-        .event-info span {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        /* Navigation */
-        nav {
-            background: var(--secondary);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            padding: 15px 0;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-
-        nav a {
-            color: var(--text);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--accent);
-        }
-
-        /* Sections */
-        section {
-            padding: 60px 0;
-            border-bottom: 1px solid #2a2a4a;
-        }
-
-        h2 {
-            font-size: 1.8rem;
-            margin-bottom: 25px;
-            color: var(--accent);
-        }
-
-        h3 {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-        }
-
-        p {
-            margin-bottom: 15px;
-            color: var(--text-muted);
-        }
-
-        /* Topics */
-        .topics-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-top: 25px;
-        }
-
-        .topic-card {
-            background: var(--secondary);
-            padding: 25px;
-            border-radius: 8px;
-            border-left: 4px solid var(--accent);
-        }
-
-        .topic-card h3 {
-            color: var(--text);
-            margin-bottom: 10px;
-        }
-
-        /* Schedule */
-        .schedule-item {
-            display: flex;
-            gap: 20px;
-            padding: 20px 0;
-            border-bottom: 1px solid #2a2a4a;
-        }
-
-        .schedule-time {
-            min-width: 120px;
-            color: var(--accent);
-            font-weight: 600;
-        }
-
-        .schedule-content h3 {
-            margin-bottom: 5px;
-            color: var(--text);
-        }
-
-        .schedule-content p {
-            margin-bottom: 0;
-            font-size: 0.95rem;
-        }
-
-        /* Speakers */
-        .speakers-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 25px;
-        }
-
-        .speaker-card {
-            text-align: center;
-            background: var(--secondary);
-            padding: 30px 20px;
-            border-radius: 8px;
-        }
-
-        .speaker-photo {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background: #3a3a5a;
-            margin: 0 auto 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
-            color: var(--accent);
-        }
-
-        .speaker-card h3 {
-            color: var(--text);
-            margin-bottom: 5px;
-        }
-
-        .speaker-card .affiliation {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-
-        /* Organizers */
-        .organizers-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 25px;
-            margin-top: 25px;
-        }
-
-        .organizer {
-            text-align: center;
-        }
-
-        .organizer h3 {
-            color: var(--text);
-            font-size: 1.1rem;
-            margin-bottom: 5px;
-        }
-
-        .organizer p {
-            font-size: 0.9rem;
-            margin-bottom: 0;
-        }
-
-        /* Important Dates */
-        .dates-list {
-            margin-top: 20px;
-        }
-
-        .date-item {
-            display: flex;
-            gap: 20px;
-            padding: 15px 0;
-            border-bottom: 1px solid #2a2a4a;
-            align-items: center;
-        }
-
-        .date-value {
-            min-width: 150px;
-            color: var(--accent);
-            font-weight: 600;
-        }
-
-        /* CTA Button */
-        .cta-button {
-            display: inline-block;
-            background: var(--accent);
-            color: white;
-            padding: 15px 35px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: 20px;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(233, 69, 96, 0.4);
-        }
-
-        /* Footer */
-        footer {
-            background: var(--secondary);
-            padding: 40px 0;
-            text-align: center;
-        }
-
-        footer p {
-            color: var(--text-muted);
-            margin-bottom: 10px;
-        }
-
-        footer a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 1.8rem;
-            }
-
-            .subtitle {
-                font-size: 1.1rem;
-            }
-
-            nav ul {
-                gap: 15px;
-            }
-
-            .schedule-item {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .schedule-time {
-                min-width: auto;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -330,9 +24,11 @@
     <nav>
         <ul>
             <li><a href="#about">About</a></li>
-                        <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#topics">Topics</a></li>
+            <li><a href="#schedule">Schedule</a></li>
             <li><a href="#speakers">Speakers</a></li>
-                                    <li><a href="#organizers">Organizers</a></li>
+            <li><a href="#organizers">Organizers</a></li>
+            <li><a href="#join">Join Us</a></li>
         </ul>
     </nav>
 
@@ -354,6 +50,43 @@
             </div>
         </section>
 
+        <section id="topics">
+            <div class="container">
+                <h2>Key Topics</h2>
+                <div class="topics-grid">
+                    <div class="topic-card">
+                        <img src="assets/images/sec1.gif" alt="" class="topic-media">
+                        <h3>Creative Tools</h3>
+                        <p>
+                            Interactive systems and interfaces that enable artists and designers to collaborate with generative
+                            models in real time, including sketch-, text-, gesture-, and multimodal-driven workflows, as well as tools for
+                            exploration, refinement, and creative control.
+                        </p>
+                    </div>
+                    <div class="topic-card">
+                        <video src="assets/images/sec2.mp4" class="topic-media" autoplay loop muted playsinline></video>
+                        <h3>Generative Art</h3>
+                        <p>
+                            Graphics and AI techniques for synthesizing visual, 3D, and multimodal artistic content,
+                            including procedural generation, diffusion and foundation models, neural representations, and physics-aware or
+                            semantics-aware generation for artistic expression.
+                        </p>
+                    </div>
+                    <div class="topic-card">
+                        <video src="assets/images/sec3.mp4" class="topic-media" autoplay loop muted playsinline></video>
+                        <h3>Design, Fabrication, and Computational Craft</h3>
+                        <p>
+                            Generative methods that tightly couple virtual design with
+                            real-world fabrication, integrating material property, manufacturing constraints, and physical processes into
+                            the creative loop.
+                            <!-- This includes fabrication-aware modeling, process-constrained generation, digital twins that
+                            connect virtual artifacts to physical outcomes, and applications spanning architecture, fashion, and computational
+                            making. -->
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section id="schedule">
             <div class="container">
@@ -487,6 +220,43 @@
 
                 <h3 style="margin-top: 40px; margin-bottom: 20px;">Program Committee</h3>
                 <p>TBA</p>
+            </div>
+        </section>
+
+        <section id="join">
+            <div class="container">
+                <h2>Join Us at SIGGRAPH 2026</h2>
+                <p style="text-align: center; font-size: 1.1rem; margin-bottom: 40px; color: var(--text);">
+                    This workshop is for anyone interested in human-AI co-creation in generative art. Whether you're
+                    analyzing creative processes, designing interactions, or training models, we welcome all curious minds.
+                </p>
+
+                <div class="join-grid">
+                    <div class="join-card">
+                        <div class="join-icon">🔬</div>
+                        <h3>Researchers</h3>
+                        <p>In graphics, AI, and computer vision</p>
+                    </div>
+                    <div class="join-card">
+                        <div class="join-icon">🎨</div>
+                        <h3>Artists & Designers</h3>
+                        <p>Exploring AI-human collaboration</p>
+                    </div>
+                    <div class="join-card">
+                        <div class="join-icon">🧠</div>
+                        <h3>Cognitive Scientists</h3>
+                        <p>Studying visual cognition</p>
+                    </div>
+                    <div class="join-card">
+                        <div class="join-icon">💼</div>
+                        <h3>Practitioners</h3>
+                        <p>Building generative models</p>
+                    </div>
+                </div>
+
+                <p style="text-align: center; font-size: 1.2rem; margin-top: 50px; color: var(--text); font-style: italic;">
+                    If a line can say a lot, imagine what we can say together.
+                </p>
             </div>
         </section>
     </main>
