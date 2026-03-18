@@ -230,7 +230,7 @@ img.topic-media {
 /* Organizers */
 .organizers-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(5, 1fr);
     gap: 25px;
     margin-top: 25px;
 }
@@ -248,6 +248,35 @@ img.topic-media {
 .organizer p {
     font-size: 0.9rem;
     margin-bottom: 0;
+}
+
+.org-affil {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    margin-bottom: 8px !important;
+}
+
+.org-bio {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 8px !important;
+}
+
+.org-email {
+    font-size: 0.85rem;
+    font-style: italic;
+    margin-top: 6px;
+    margin-bottom: 0 !important;
+}
+
+.org-email a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.org-email a:hover {
+    text-decoration: underline;
 }
 
 /* Join Us */
@@ -340,6 +369,42 @@ footer p {
 footer a {
     color: var(--accent);
     text-decoration: none;
+}
+
+/* Person photo (circular) */
+.person-photo-wrap {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 15px;
+    border: 3px solid var(--accent);
+}
+
+.person-photo-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.speaker-card h3 a,
+.organizer h3 a {
+    color: var(--text);
+    text-decoration: none;
+    font-style: italic;
+}
+
+.speaker-card h3 a:hover,
+.organizer h3 a:hover {
+    color: var(--accent);
+}
+
+.speaker-bio {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    margin-top: 8px;
+    margin-bottom: 0;
+    line-height: 1.5;
 }
 
 /* Responsive */
