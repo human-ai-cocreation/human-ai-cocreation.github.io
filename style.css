@@ -1,9 +1,9 @@
 :root {
-    --primary: #1a1a2e;
-    --secondary: #16213e;
+    --primary: #ffffff;
+    --secondary: #f8f9fa;
     --accent: #e94560;
-    --text: #eaeaea;
-    --text-muted: #a0a0a0;
+    --text: #1a1a2e;
+    --text-muted: #666666;
 }
 
 * {
@@ -27,7 +27,7 @@ body {
 
 /* Header */
 header {
-    background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
     padding: 80px 0 60px;
     text-align: center;
     border-bottom: 3px solid var(--accent);
@@ -78,6 +78,7 @@ nav {
     top: 0;
     z-index: 100;
     padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
@@ -102,7 +103,7 @@ nav a:hover {
 /* Sections */
 section {
     padding: 60px 0;
-    border-bottom: 1px solid #2a2a4a;
+    border-bottom: 1px solid #e0e0e0;
     position: relative;
 }
 
@@ -134,6 +135,7 @@ p {
     background: var(--secondary);
     padding: 25px;
     border-radius: 8px;
+    border: 1px solid #e0e0e0;
     border-left: 4px solid var(--accent);
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-left-color 0.3s ease;
 }
@@ -162,7 +164,7 @@ p {
 }
 
 img.topic-media {
-    background-color: white;
+    background-color: #f0f0f0;
 }
 
 /* Schedule */
@@ -170,7 +172,8 @@ img.topic-media {
     margin-top: 20px;
     border-radius: 6px;
     overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
 }
 
 .schedule-item {
@@ -273,13 +276,14 @@ img.topic-media {
     background: var(--secondary);
     padding: 30px 20px;
     border-radius: 8px;
+    border: 1px solid #e0e0e0;
 }
 
 .speaker-photo {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    background: #3a3a5a;
+    background: #e0e0e0;
     margin: 0 auto 15px;
     display: flex;
     align-items: center;
@@ -363,6 +367,7 @@ img.topic-media {
     background: var(--secondary);
     padding: 35px 25px;
     border-radius: 8px;
+    border: 1px solid #e0e0e0;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
