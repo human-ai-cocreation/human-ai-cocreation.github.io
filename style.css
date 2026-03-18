@@ -27,10 +27,25 @@ body {
 
 /* Header */
 header {
-    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-    padding: 80px 0 60px;
+    position: relative;
     text-align: center;
     border-bottom: 3px solid var(--accent);
+    overflow: hidden;
+}
+
+.header-bg-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.header-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 1;
 }
 
 .workshop-badge {
@@ -42,18 +57,22 @@ header {
     font-size: 0.9rem;
     font-weight: 600;
     margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 h1 {
     font-size: 2.5rem;
     margin-bottom: 15px;
     font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .subtitle {
     font-size: 1.3rem;
-    color: var(--text-muted);
+    color: white;
     margin-bottom: 25px;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
 }
 
 .event-info {
@@ -62,13 +81,14 @@ h1 {
     gap: 30px;
     flex-wrap: wrap;
     font-size: 1rem;
-    color: var(--text-muted);
+    color: white;
 }
 
 .event-info span {
     display: flex;
     align-items: center;
     gap: 8px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
 /* Navigation */
@@ -503,6 +523,11 @@ footer a {
 
     .subtitle {
         font-size: 1.1rem;
+    }
+
+    .workshop-badge {
+        font-size: 0.8rem;
+        padding: 6px 16px;
     }
 
     nav ul {
