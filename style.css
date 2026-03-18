@@ -393,6 +393,18 @@ img.topic-media {
     margin-bottom: 0;
 }
 
+/* Acknowledgement */
+#acknowledgement p a.person-link {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#acknowledgement p a.person-link:hover {
+    color: var(--accent);
+}
+
 /* Important Dates */
 .dates-list {
     margin-top: 20px;
