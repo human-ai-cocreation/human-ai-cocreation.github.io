@@ -172,19 +172,20 @@ p {
     margin-bottom: 10px;
 }
 
-.topic-media {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    display: block;
+.topic-images-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
     margin-bottom: 15px;
-    user-select: none;
-    pointer-events: none;
-    border-radius: 5px;
 }
 
-img.topic-media {
-    background-color: #f0f0f0;
+.topic-images-grid img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+    user-select: none;
+    pointer-events: none;
 }
 
 /* Schedule */
