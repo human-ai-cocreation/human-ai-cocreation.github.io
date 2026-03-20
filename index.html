@@ -64,9 +64,9 @@
                     <div class="topic-card">
                         <div class="topic-images-grid">
                             <img src="assets/images/topics/tool_1.png" alt="Creative Tools 1">
-                            <img src="assets/images/topics/tool_2.jpg" alt="Creative Tools 2">
-                            <img src="assets/images/topics/tool_3.png" alt="Creative Tools 3">
-                            <img src="assets/images/topics/tool_4.png" alt="Creative Tools 4">
+                            <img src="assets/images/topics/tool_2.gif" alt="Creative Tools 2">
+                            <img src="assets/images/topics/tool_3.gif" alt="Creative Tools 3">
+                            <img src="assets/images/topics/tool_4.gif" alt="Creative Tools 4">
                         </div>
                         <h3>Creative Tools</h3>
                         <p>
@@ -80,7 +80,7 @@
                             <img src="assets/images/topics/art_1.png" alt="Generative Art 1">
                             <img src="assets/images/topics/art_2.png" alt="Generative Art 2">
                             <img src="assets/images/topics/art_3.png" alt="Generative Art 3">
-                            <img src="assets/images/topics/art_4.jpg" alt="Generative Art 4">
+                            <img src="assets/images/topics/art_4.png" alt="Generative Art 4">
                         </div>
                         <h3>Generative Art</h3>
                         <p>
@@ -91,10 +91,10 @@
                     </div>
                     <div class="topic-card">
                         <div class="topic-images-grid">
-                            <img src="assets/images/topics/design_1.png" alt="Design 1">
-                            <img src="assets/images/topics/design_2.png" alt="Design 2">
-                            <img src="assets/images/topics/design_3.png" alt="Design 3">
-                            <img src="assets/images/topics/design_4.png" alt="Design 4">
+                            <video src="assets/images/topics/design_1.mp4" class="topic-video" muted playsinline preload="metadata"></video>
+                            <video src="assets/images/topics/design_2.mp4" class="topic-video" muted playsinline preload="metadata"></video>
+                            <video src="assets/images/topics/design_3.mp4" class="topic-video" muted playsinline preload="metadata"></video>
+                            <video src="assets/images/topics/design_4.mp4" class="topic-video" muted playsinline preload="metadata"></video>
                         </div>
                         <h3>Design, Fabrication, and Computational Craft</h3>
                         <p>
@@ -113,7 +113,8 @@
         <section id="schedule">
             <div class="container">
                 <h2>Schedule</h2>
-                <p>Tentative half-day workshop schedule (times in local conference time):</p>
+                <p><strong>Date:</strong> July 21, 2026 | <strong>Time:</strong> 9:00-12:15 (PT) | <strong>Room:</strong> TBA</p>
+                <p style="margin-top: 10px;">Tentative half-day workshop schedule:</p>
 
                 <table class="schedule-table">
                     <thead>
@@ -121,7 +122,7 @@
                             <th>Time</th>
                             <th>Session</th>
                             <th>Speaker(s)</th>
-                            <th>Slide</th>
+                            <th>Talk</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -357,8 +358,21 @@
         <div class="container">
             <p>Human-AI Co-Creation in Generative Art Workshop</p>
             <p>Part of <a href="https://s2026.siggraph.org" target="_blank">SIGGRAPH 2026</a></p>
-            <p style="margin-top: 20px;">Contact: <a href="mailto:workshop@example.com">workshop@example.com</a></p>
+            <p style="margin-top: 20px;">Contact: <a href="mailto:anajymua@gmail.com">anajymua@gmail.com</a></p>
         </div>
     </footer>
+
+    <script>
+        // Set videos to show last frame
+        document.addEventListener('DOMContentLoaded', function() {
+            const videos = document.querySelectorAll('.topic-video');
+            videos.forEach(video => {
+                video.addEventListener('loadedmetadata', function() {
+                    // Set to last frame (duration - 0.1 seconds to ensure it's visible)
+                    this.currentTime = Math.max(0, this.duration - 0.1);
+                });
+            });
+        });
+    </script>
 </body>
 </html>
