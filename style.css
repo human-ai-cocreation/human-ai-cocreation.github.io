@@ -496,13 +496,6 @@ footer a {
     text-decoration: none;
 }
 
-footer .sponsor-line {
-    font-size: 0.8em;
-    color: var(--text-muted);
-    opacity: 0.7;
-    margin-top: 6px;
-}
-
 /* Person photo (circular) */
 .person-photo-wrap {
     width: 130px;
