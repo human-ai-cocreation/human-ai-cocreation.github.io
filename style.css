@@ -288,6 +288,18 @@ p {
     border-bottom-color: var(--accent);
 }
 
+.schedule-table .talk-link {
+    color: var(--accent);
+    font-style: normal;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom-color 0.2s ease;
+}
+
+.schedule-table .talk-link:hover {
+    border-bottom-color: var(--accent);
+}
+
 .schedule-table .speaker-affiliation {
     color: var(--text-muted);
     font-size: 0.85rem;
